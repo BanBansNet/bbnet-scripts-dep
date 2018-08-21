@@ -1,6 +1,5 @@
 #!/bin/bash
 . path.sh
-src_path="/home/banbans/ddnet"
 dest_path=$srv_dir
 #dest_path="/home/banbans/bbnet-scripts"
 echo "----------------------------------"
