@@ -9,7 +9,7 @@ then
 fi
 is_debug=$2
 
-cd $srv_dir;
+cd $root_dir;
 port=$(( 8310 + $1 ))
 echo "sv_name BanBansNetwork by ChillerDragon GER $1" > $cfg_dir/tmp.cfg
 echo "sv_port $port" >> $cfg_dir/tmp.cfg

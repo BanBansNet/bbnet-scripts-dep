@@ -22,9 +22,9 @@ fi
 if [[ "$USER" == "banbans" ]]
 then
     current_dir=`pwd`
-    if [[ "$current_dir" == "$srv_dir/bbnet-scripts" ]]
+    if [[ "$current_dir" == "$root_dir/bbnet-scripts" ]]
     then
-        cd $srv_dir
+        cd $root_dir
         git clone https://github.com/BanBansNet/bbnet-maps
         mv bbnet-maps maps
         git clone https://github.com/ddnet/ddnet --recursive
@@ -32,7 +32,7 @@ then
         ./build.sh
         echo "Done installing bbnet."
     else
-        echo "working directory has to be $srv_dir/bbnet-scripts"
+        echo "working directory has to be $root_dir/bbnet-scripts"
     fi
 else
     echo "you have to be user banbans to install BanBansNet"

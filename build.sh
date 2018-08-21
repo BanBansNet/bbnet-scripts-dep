@@ -1,6 +1,6 @@
 #!/bin/bash
 . path.sh
-dest_path=$srv_dir
+dest_path=$root_dir
 #dest_path="/home/banbans/bbnet-scripts"
 echo "----------------------------------"
 echo "ChillerDragon's banbans update script"

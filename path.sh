@@ -1,7 +1,6 @@
 #/bin/bash
-srv_dir="/home/banbans/srv" #TODO: rename to root or maindir
-mkdir -p $srv_dir
-log_dir="/home/banbans/srv/bbnet-scripts/logs"
+root_dir="/home/banbans/bbnet"
+cfg_dir="$root_dir/bbnet-scripts/cfg"
+src_path="$root_dir/ddnet"
+log_dir="$root_dir/bbnet-scripts/logs"
 mkdir -p $log_dir
-cfg_dir="/home/banbans/srv/bbnet-scripts/cfg"
-src_path="$srv_dir/ddnet"
