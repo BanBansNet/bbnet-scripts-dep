@@ -1,4 +1,5 @@
 rcon.cfg
 sql.cfg
+*.log
 BanBans_srv
 BanBans_srv_old
