@@ -6,6 +6,7 @@ A repo holding all scripts that run BanBansNetwork
 ```
 sudo adduser banbans
 su banbans
+cd
 mkdir bbnet
 cd bbnet
 git clone https://github.com/BanBansNet/bbnet-scripts
