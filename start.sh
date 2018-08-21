@@ -17,6 +17,7 @@ echo "echo [BanBansNet] started server $1 at port $port" >> $cfg_dir/tmp.cfg
 logfile="$log_dir/banbans_srv$1_$(date +%F_%H-%M-%S).log"
 nohup ./BanBans_srv server=$1 -f $cfg_dir/autoexec.cfg > $logfile 2>&1 &
 #nohup ./BanBans_srv > /dev/null 2>&1 &
+echo -e "\e[1;32m[+]\e[0m started server $1"
 
 if [[ "$is_debug" == "1" ]]
 then

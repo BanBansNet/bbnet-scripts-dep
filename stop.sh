@@ -9,10 +9,10 @@ fi
 
 if [[ "$1" == "-1" ]]
 then
-    echo "[-] Shutting down all servers"
+    echo -e "\e[1;31m[-]\e[0m stopping all servers ..."
     pkill -f "./BanBans_srv server="
 else
-    echo "[-] Shutting down server $1"
+    echo -e "\e[1;31m[-]\e[0m stopping server $1 ..."
     pkill -f "./BanBans_srv server=$1"
 fi
 
