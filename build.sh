@@ -31,7 +31,12 @@ make
 
 cd $dest_path
 echo "[BACKUP] Server";
-mv BanBans_srv BanBans_srv_old;
+if [ ! -f BanBans_srv ]
+then
+    echo "skipping backup because there is no old binary"
+else
+    mv BanBans_srv BanBans_srv_old;
+fi
 echo "[UPDATE] binary";
 cp $src_path/build/DDNet-Server BanBans_srv;
 

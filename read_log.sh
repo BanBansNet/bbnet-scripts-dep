@@ -8,7 +8,7 @@ then
 fi
 
 logfile="$log_dir/banbans_srv$1_*.log"
-if [ ! -f $logfile ] #TODO: doesnt work
+if [ ! -f $logfile ]
 then
     echo "no logs for server $1"
 else
