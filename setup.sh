@@ -4,7 +4,7 @@ echo "----------------------------------"
 echo "     BanBansNetwork setup.sh      "
 echo "----------------------------------"
 echo "this script should only be launched one time"
-if [ -f .bbnet_setup_done ]
+if [ -f $root_dir/bbnet-scripts/.bbnet_setup_done ]
 then
     echo -e "\e[1;31m[ERROR] setup already done.\e[0m" 
     exit
