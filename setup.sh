@@ -5,16 +5,20 @@ echo "     BanBansNetwork setup.sh      "
 echo "----------------------------------"
 echo "this script should only be launched one time"
 echo "it fully installs bbnet"
-if [ ! -f $root_dir ]
-then
-    echo "bbnet will be installed at $root_dir"
-    if [ ! -f $src_path ]
-    then
-        echo -e "\e[1;31m[WARNING]\e[0m src_dir=$src_path already exist!"
-    fi
-else
-    echo -e "\e[1;31m[WARNING]\e[0m root_dir=$root_dir doesn't exist!"
-fi
+echo "bbnet will be installed at $root_dir"
+#TODO: fix the file exist check cuz its doin rand stuff
+#if [ ! -f "$root_dir" ]
+#then
+#    echo "bbnet will be installed at $root_dir"
+#    if [ ! -f $src_path ]
+#    then
+#        echo "IDK MESSAGE $src_path not found"
+#    else
+#        echo -e "\e[1;31m[WARNING]\e[0m src_dir=$src_path already exist!"
+#    fi
+#else
+#    echo -e "\e[1;31m[WARNING]\e[0m root_dir=$root_dir doesn't exist!"
+#fi
 echo "Do you really want to run it? Write 'n' to abort"
 read -n 1 -p "" inp
 if [ "$inp" == "n" ]; then
@@ -49,7 +53,8 @@ then
         git clone https://github.com/ddnet/ddnet --recursive
         cd bbnet-scripts
         ./build.sh
-        echo "Done installing bbnet."
+        ./test-cfg.sh
+        echo "[setup.sh] Done installing bbnet."
     else
         echo "working directory has to be $root_dir/bbnet-scripts"
     fi
