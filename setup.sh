@@ -5,17 +5,24 @@ echo "     BanBansNetwork setup.sh      "
 echo "----------------------------------"
 echo "this script should only be launched one time"
 echo "it fully installs bbnet"
-read -p "Do you really want to run it? Write 'n' to abort" inp
+if [ ! -f $root_dir ]
+then
+    echo "bbnet will be installed at $root_dir"
+    if [ ! -f $src_path ]
+    then
+        echo -e "\e[1;31m[WARNING]\e[0m src_dir=$src_path already exist!"
+    fi
+else
+    echo -e "\e[1;31m[WARNING]\e[0m root_dir=$root_dir doesn't exist!"
+fi
+echo "Do you really want to run it? Write 'n' to abort"
+read -n 1 -p "" inp
 if [ "$inp" == "n" ]; then
-exit
+    printf "\n[bbnet] stopped setup.\n"
+    exit
 elif [ "$inp" == "N" ]; then
-exit
-elif [ "$inp" == "No" ]; then
-exit
-elif [ "$inp" == "no" ]; then
-exit
-elif [ "$inp" == "NO" ]; then
-exit
+    printf "\n[bbnet] stopped setup.\n"
+    exit
 fi
 
 
