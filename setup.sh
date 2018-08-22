@@ -36,6 +36,7 @@ then
         echo "add_sqlserver w teeworlds record teeworlds \"change me\" \"localhost\" \"3306\"" >> sql.cfg
         vi sql.cfg
         cd $root_dir
+        git clone https://github.com/ChillerDragon/chircohn
         git clone https://github.com/BanBansNet/bbnet-maps
         mv bbnet-maps maps
         git clone https://github.com/ddnet/ddnet --recursive
