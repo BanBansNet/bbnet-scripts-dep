@@ -44,11 +44,11 @@ then
         echo "echo [bbnet] loading rcon..." > rcon.cfg
         echo "sv_rcon_password \"change me\"" >> rcon.cfg
         echo "sv_rcon_mod_password \"change me\"" >> rcon.cfg
-        vi rcon.cfg
+        vim rcon.cfg
         echo "echo [bbnet] loading sql passwd..." > sql.cfg
         echo "add_sqlserver r teeworlds record teeworlds \"change me\" \"localhost\" \"3306\"" >> sql.cfg
         echo "add_sqlserver w teeworlds record teeworlds \"change me\" \"localhost\" \"3306\"" >> sql.cfg
-        vi sql.cfg
+        vim sql.cfg
         cd $root_dir
         git clone https://github.com/ChillerDragon/chircohn
         git clone https://github.com/BanBansNet/bbnet-maps

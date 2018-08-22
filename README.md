@@ -26,3 +26,9 @@ cd bbnet-scripts
 #stop all servers
 ./stop.sh -1
 ```
+
+# dependencies
+
+```
+sudo apt install cmake git libcurl4-openssl-dev python vim
+```
