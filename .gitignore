@@ -4,3 +4,4 @@ tmp.cfg
 *.log
 BanBans_srv
 BanBans_srv_old
+.bbnet_setup_done
