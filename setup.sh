@@ -4,6 +4,11 @@ echo "----------------------------------"
 echo "     BanBansNetwork setup.sh      "
 echo "----------------------------------"
 echo "this script should only be launched one time"
+if [ -f .bbnet_setup_done ]
+then
+    echo -e "\e[1;31m[ERROR] setup already done.\e[0m" 
+    exit
+fi
 echo "it fully installs bbnet"
 if [ -d "$root_dir" ]
 then
@@ -52,6 +57,7 @@ then
         cd bbnet-scripts
         ./build.sh
         ./test-cfg.sh
+        touch .bbnet_setup_done
         echo "[setup.sh] Done installing bbnet."
     else
         echo "working directory has to be $root_dir/bbnet-scripts"
